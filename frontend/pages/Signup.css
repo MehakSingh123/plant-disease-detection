@@ -1,0 +1,199 @@
+/* src/pages/Signup.css & Login.css - SCOPED VERSION */
+
+/* Scoped Auth Page Container */
+.auth-page {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Animated background shapes */
+  .auth-page::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -250px;
+    right: -250px;
+    animation: authFloat 8s ease-in-out infinite;
+  }
+  
+  .auth-page::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    bottom: -200px;
+    left: -200px;
+    animation: authFloat 6s ease-in-out infinite reverse;
+  }
+  
+  @keyframes authFloat {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(5deg);
+    }
+  }
+  
+  .auth-page h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .auth-form {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #333;
+  }
+  
+  .auth-form input:focus {
+    outline: none;
+    border-color: #11998e;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(17, 153, 142, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .auth-form input::placeholder {
+    color: #999;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+    letter-spacing: 0.5px;
+  }
+  
+  .auth-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(17, 153, 142, 0.5);
+    background: linear-gradient(135deg, #0d7a72 0%, #2dd467 100%);
+  }
+  
+  .auth-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(17, 153, 142, 0.4);
+  }
+  
+  .auth-form button:disabled {
+    background: linear-gradient(135deg, #999 0%, #777 100%);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Error message styling */
+  .auth-error {
+    background: #fee;
+    color: #c33;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #c33;
+    font-size: 0.95rem;
+    animation: shake 0.3s ease;
+    z-index: 1;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .auth-page h2 {
+      font-size: 2rem;
+    }
+  
+    .auth-form {
+      padding: 2rem 1.5rem;
+    }
+  
+    .auth-form input,
+    .auth-form button {
+      padding: 0.875rem 1rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Focus visible for accessibility */
+  .auth-form input:focus-visible,
+  .auth-form button:focus-visible {
+    outline: 3px solid rgba(17, 153, 142, 0.5);
+    outline-offset: 2px;
+  }
+  
+  /* Additional styles for links */
+  .auth-form a {
+    color: #11998e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .auth-form a:hover {
+    color: #0d7a72;
+    text-decoration: underline;
+  }

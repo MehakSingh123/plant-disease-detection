@@ -1,0 +1,455 @@
+/* src/pages/About.css - SCOPED VERSION */
+
+/* Only affects elements inside .about-page */
+.about-page {
+    background: linear-gradient(to bottom, #f0f9f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .about-page .about-hero {
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-page .about-hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -200px;
+    right: -100px;
+    animation: aboutHeroFloat 8s ease-in-out infinite;
+  }
+  
+  .about-page .about-hero::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -100px;
+    animation: aboutHeroFloat 6s ease-in-out infinite reverse;
+  }
+  
+  @keyframes aboutHeroFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+  }
+  
+  .about-page .about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-page .about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: aboutFadeInDown 0.8s ease-out;
+  }
+  
+  .about-page .about-tagline {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    animation: aboutFadeInUp 0.8s ease-out 0.2s both;
+  }
+  
+  /* Container */
+  .about-page .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Sections */
+  .about-page .about-section {
+    padding: 5rem 0;
+  }
+  
+  .about-page .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 3rem;
+    font-weight: 700;
+  }
+  
+  /* Mission Section */
+  .about-page .mission-section {
+    background: white;
+  }
+  
+  .about-page .mission-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .about-page .mission-text {
+    flex: 1;
+  }
+  
+  .about-page .mission-text h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .about-page .mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-page .mission-icon {
+    flex-shrink: 0;
+  }
+  
+  .about-page .large-emoji {
+    font-size: 10rem;
+    display: block;
+    animation: aboutPulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes aboutPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  /* Features Grid */
+  .about-page .features-grid-section {
+    background: linear-gradient(to bottom, #f0f9f4 0%, #e8f5e8 100%);
+  }
+  
+  .about-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-page .feature-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(76, 175, 80, 0.1);
+  }
+  
+  .about-page .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.2);
+  }
+  
+  .about-page .feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-page .feature-box h3 {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .about-page .feature-box p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  /* How It Works */
+  .about-page .how-it-works-section {
+    background: white;
+  }
+  
+  .about-page .process-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .about-page .process-step {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e8 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 280px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-page .process-step:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-page .step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  }
+  
+  .about-page .step-icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+  
+  .about-page .process-step h3 {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .about-page .process-step p {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .about-page .process-arrow {
+    font-size: 2.5rem;
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Stats Section */
+  .about-page .stats-section {
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+  }
+  
+  .about-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-page .stat-item {
+    padding: 2rem;
+
+  }
+  
+  .about-page .stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px white;
+  }
+  
+  .about-page .stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+  
+  /* Vision Section */
+  .about-page .vision-section {
+    background: white;
+  }
+  
+  .about-page .vision-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-page .vision-content h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .about-page .vision-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 3rem;
+  }
+  
+  .about-page .vision-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-page .value-item {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e8 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-page .value-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-page .value-icon {
+    font-size: 3rem;
+  }
+  
+  .about-page .value-text {
+    font-size: 1.1rem;
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  /* CTA Section */
+  .about-page .about-cta {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e8 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .about-page .about-cta h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .about-page .about-cta p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+  
+  .about-page .cta-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .about-page .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+  }
+  
+  /* Animations - scoped with unique names */
+  @keyframes aboutFadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes aboutFadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-page .about-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-page .about-tagline {
+      font-size: 1.2rem;
+    }
+  
+    .about-page .mission-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .about-page .large-emoji {
+      font-size: 6rem;
+    }
+  
+    .about-page .features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-page .process-steps {
+      flex-direction: column;
+    }
+  
+    .about-page .process-arrow {
+      transform: rotate(90deg);
+    }
+  
+    .about-page .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  
+    .about-page .vision-values {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-page .about-hero h1 {
+      font-size: 2rem;
+    }
+  
+    .about-page .section-title {
+      font-size: 2rem;
+    }
+  
+    .about-page .stat-number {
+      font-size: 2.5rem;
+    }
+  
+    .about-page .about-cta h2 {
+      font-size: 2rem;
+    }
+  }

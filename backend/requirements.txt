@@ -7,3 +7,4 @@ python-dotenv
 tensorflow-cpu
 flask_sqlalchemy
 flask_bcrypt
+flask-jwt-extended
